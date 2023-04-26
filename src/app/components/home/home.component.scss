@@ -1,0 +1,77 @@
+@use '../../../sass/custom' as *;
+@use '../../../sass/components/mixins' as *;
+
+.content-top {
+    display: flex;
+    color: $white;
+    background: $secondary;
+    margin-bottom: 2rem;
+
+    .left {
+        width: 50%;
+        @media (max-width: 576px) {
+            width: 100%;
+        }
+    }
+    .right {
+        width: 50%;
+        text-align: right;
+        @media (max-width: 576px) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .buttons {
+        margin-top: 1rem;
+    }
+
+    @media (max-width: 576px) {
+        display: block;
+    }
+}
+
+.content-bottom {
+    background: $white;
+    margin-top: 2rem;
+    padding-top: 1rem;
+
+    .heading {
+        width: 50%;
+        margin: auto;
+        margin-bottom: 2rem;
+        text-align: center;
+        .link {
+            color: $link;
+        }
+        @media (max-width: 576px) {
+            width: 80%;
+        }
+    }
+
+    .bottom-end {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        div {
+            width: 50%;
+        }
+        div:last-child {
+            text-align: right;
+        }
+        mat-list-item {
+            color: $link;
+        }
+
+        @media (max-width: 768px) {
+            display: block;
+            div {
+                width: 100%;
+            }
+            div:last-child {
+                text-align: center;
+            }
+        }
+    }
+
+}

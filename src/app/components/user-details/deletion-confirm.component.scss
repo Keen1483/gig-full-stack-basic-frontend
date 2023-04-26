@@ -1,0 +1,16 @@
+.deletion-confirm {
+    text-align: center;
+    .message {
+        margin-bottom: 1rem;
+
+        .user {
+            font-weight: 700;
+        }
+    }
+
+    .actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

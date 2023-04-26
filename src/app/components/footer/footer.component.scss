@@ -1,0 +1,9 @@
+@use '../../../sass/custom' as *;
+@use '../../../sass/components/mixins' as *;
+
+.footer {
+    background: #5353e0;
+    text-align: center;
+    color: $white;
+    padding: 0.5rem 0;
+}

@@ -1,0 +1,25 @@
+<div class="user-details">
+    <mat-card *ngIf="user !== undefined">
+        <mat-card-header>
+            <div mat-icon-button mat-card-avatar>
+                <mat-icon color="primary">manage_accounts</mat-icon>
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-card-title class="mat-display-1">{{ user.username }}</mat-card-title>
+            <div>
+                <p><span>ID</span>: {{ user.id }}</p>
+                <p><span>Email</span>: {{ user.email }}</p>
+                <p><span>Username</span>: {{ user.username }}</p>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" routerLink="edit">
+                Edit
+            </button>
+            <button mat-raised-button color="accent" (click)="config.openDeletionConfirm(user.username || '')">
+                Delete
+            </button>
+        </mat-card-actions>
+    </mat-card>
+</div>

@@ -1,0 +1,6 @@
+@use '../../../sass/custom' as *;
+@use '../../../sass/components/typography' as *;
+
+.mat-caption {
+    color: $error;
+}

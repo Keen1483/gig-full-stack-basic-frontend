@@ -1,0 +1,38 @@
+@use '../../src/sass/custom' as *;
+@use '../app/../sass/components/mixins' as *;
+
+mat-sidenav-container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    @include gradient;
+}
+
+mat-sidenav {
+    padding-top: 2rem;
+    min-width: 300px;
+    @media (max-width: 576px) {
+        min-width: 240px;
+    }
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    background: $white;
+    line-height: 160%;
+    @include gradient-transparent;
+
+    .page-content {
+        margin-top: 24px;
+        color: $primary;
+        font-weight: 200;
+        font-size: 1rem;
+    }
+}

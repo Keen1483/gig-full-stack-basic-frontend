@@ -1,0 +1,27 @@
+<mat-toolbar>
+    <button mat-icon-button (click)="navOpen()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span class="spacer1"></span>
+    <span routerLink="" class="brand">
+        HOLA
+    </span>
+    <span class="spacer"></span>
+    <ul>
+        <li>
+            <a mat-button class="btn" [routerLink]="[ '/home' ]" routerLinkActive="active">Home</a>
+        </li>
+        <li>
+            <a mat-button class="btn" [routerLink]="[ '/users' ]" routerLinkActive="active" *ngIf="authService.isLoggedIn()">Users</a>
+        </li>
+        <li>
+            <a mat-button class="btn" [routerLink]="[ '/signup' ]" routerLinkActive="active" *ngIf="!authService.isLoggedIn()">Sign Up</a>
+        </li>
+        <li>
+            <a mat-button class="btn" [routerLink]="[ '/signin' ]" routerLinkActive="active" *ngIf="!authService.isLoggedIn()">Sign In</a>
+        </li>
+        <li>
+            <a mat-button class="btn" *ngIf="authService.isLoggedIn()" (click)="authService.signout()">Sign Out</a>
+        </li>
+    </ul>
+</mat-toolbar>
